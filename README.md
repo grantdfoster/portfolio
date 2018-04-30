@@ -9,9 +9,9 @@
 
 ## Code Snippets - [View on Github](https://github.com/WeConnect/star-sheets)
 
-#### Create Vector Plan from Points, Using D3, Lodash, and Vue
+#### Create Vector Plan from Points
 ```html
-<svg v-if="roomEnvironment()" class="animated fadeIn" :width="windowWidthExtents[1]" :height="windowHeightExtents[0]">
+<svg :width="windowWidthExtents[1]" :height="windowHeightExtents[0]">
   <path
     v-for="room, index in searchedRooms"
     :key="room.uuid"
