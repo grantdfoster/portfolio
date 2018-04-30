@@ -36,28 +36,6 @@ scaledLocationY () {
 }
 ```
 
-#### Scale Vector Plan to Window
-```javascript
-calculatePlanExtents () {
-  var xValues = [];
-  var yValues = [];
-  _.forEach(this.rooms, (room) => {
-    _.forEach(room.outline, (pt) => {
-      xValues.push(parseInt(pt.x));
-      yValues.push(parseInt(pt.y));
-    });
-  });
-
-  this.planWidthExtents = [Math.min.apply(null, xValues), Math.max.apply(null, xValues)];
-  this.planHeightExtents = [Math.min.apply(null, yValues), Math.max.apply(null, yValues)];
-  var planHeight = this.planHeightExtents[1] - this.planHeightExtents[0];
-  var planWidth = this.planWidthExtents[1] - this.planWidthExtents[0];
-
-  var scaleFactor = this.windowWidthExtents[1] / planWidth;
-  this.windowHeightExtents = [Math.abs(planHeight * scaleFactor), 0];
-}
-```
-
 #### Create a formatted Google Sheet Tab with Data
 ```javascript
 function createTabWithData(tabName, headers, doubleArray) {
