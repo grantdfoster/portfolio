@@ -11,7 +11,7 @@
 
 #### Create Vector Plan from Points
 ```html
-<svg :width="windowWidthExtents[1]" :height="windowHeightExtents[0]">
+<svg :width="windowWidth[1]" :height="windowHeight[0]">
   <path
     v-for="room, index in rooms"
     :key="room.uuid"
@@ -25,14 +25,14 @@
 ```
 ```javascript
 computeLine: function (points) {
-  var line = d3.line().x(pt => this.scaledLocationX()(pt.x)).y(pt => this.scaledLocationY()(pt.y)).curve(d3.curveLinearClosed);
+  var line = d3.line().x(pt => this.scaleX()(pt.x)).y(pt => this.scaleY()(pt.y)).curve(d3.curveLinearClosed);
   return line(points);
 },
-scaledLocationX () {
-  return d3.scaleLinear().domain(this.planWidthExtents).range(this.windowWidthExtents)
+scaleX () {
+  return d3.scaleLinear().domain(this.planWidth).range(this.windowWidth)
 },
-scaledLocationY () {
-  return d3.scaleLinear().domain(this.planHeightExtents).range(this.windowHeightExtents)
+scaleY () {
+  return d3.scaleLinear().domain(this.planHeight).range(this.windowHeight)
 }
 ```
 
