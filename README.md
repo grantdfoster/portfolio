@@ -1,24 +1,19 @@
-![demo](star-sheets-logo.png)
+![logo](star-sheets-logo.png)
 
-![demo](star-sheets-screenshots.png)
+![screenshots](star-sheets-screenshots.png)
 
 ![demo](star-sheets-demo.gif)
 
-### [View on Github](https://github.com/WeConnect/star-sheets)
+## Stack
+![stack](star-sheets-stack.png)
 
-### Stack
-* AppScripts
-* Vue
-* D3
-* Lodash
+## Code Snippets - [View on Github](https://github.com/WeConnect/star-sheets)
 
-### Code Snippets
-
-#### Create Vector Plan from Points, Using D3, Lodash, and Vue
+#### Create Vector Plan from Points
 ```html
-<svg v-if="roomEnvironment()" class="animated fadeIn" :width="windowWidthExtents[1]" :height="windowHeightExtents[0]">
+<svg :width="windowWidthExtents[1]" :height="windowHeightExtents[0]">
   <path
-    v-for="room, index in searchedRooms"
+    v-for="room, index in rooms"
     :key="room.uuid"
     @mouseover="hoveredRoom = room.uuid"
     @mouseleave="hoveredRoom = null"
@@ -46,7 +41,7 @@ scaledLocationY () {
 calculatePlanExtents () {
   var xValues = [];
   var yValues = [];
-  _.forEach(this.searchedRooms, (room) => {
+  _.forEach(this.rooms, (room) => {
     _.forEach(room.outline, (pt) => {
       xValues.push(parseInt(pt.x));
       yValues.push(parseInt(pt.y));
