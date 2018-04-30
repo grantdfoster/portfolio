@@ -11,7 +11,7 @@
 
 #### Create Vector Plan from Points
 ```html
-<svg :width="windowWidthExtents[1]" :height="windowHeightExtents[0]">
+<svg :width="windowWidth[1]" :height="windowHeight[0]">
   <path
     v-for="room, index in rooms"
     :key="room.uuid"
@@ -25,36 +25,14 @@
 ```
 ```javascript
 computeLine: function (points) {
-  var line = d3.line().x(pt => this.scaledLocationX()(pt.x)).y(pt => this.scaledLocationY()(pt.y)).curve(d3.curveLinearClosed);
+  var line = d3.line().x(pt => this.scaleX()(pt.x)).y(pt => this.scaleY()(pt.y)).curve(d3.curveLinearClosed);
   return line(points);
 },
-scaledLocationX () {
-  return d3.scaleLinear().domain(this.planWidthExtents).range(this.windowWidthExtents)
+scaleX () {
+  return d3.scaleLinear().domain(this.planWidth).range(this.windowWidth)
 },
-scaledLocationY () {
-  return d3.scaleLinear().domain(this.planHeightExtents).range(this.windowHeightExtents)
-}
-```
-
-#### Scale Vector Plan to Window
-```javascript
-calculatePlanExtents () {
-  var xValues = [];
-  var yValues = [];
-  _.forEach(this.rooms, (room) => {
-    _.forEach(room.outline, (pt) => {
-      xValues.push(parseInt(pt.x));
-      yValues.push(parseInt(pt.y));
-    });
-  });
-
-  this.planWidthExtents = [Math.min.apply(null, xValues), Math.max.apply(null, xValues)];
-  this.planHeightExtents = [Math.min.apply(null, yValues), Math.max.apply(null, yValues)];
-  var planHeight = this.planHeightExtents[1] - this.planHeightExtents[0];
-  var planWidth = this.planWidthExtents[1] - this.planWidthExtents[0];
-
-  var scaleFactor = this.windowWidthExtents[1] / planWidth;
-  this.windowHeightExtents = [Math.abs(planHeight * scaleFactor), 0];
+scaleY () {
+  return d3.scaleLinear().domain(this.planHeight).range(this.windowHeight)
 }
 ```
 
