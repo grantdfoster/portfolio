@@ -4,15 +4,7 @@
 
 ![demo](star-sheets-demo.gif)
 
-### [View on Github](https://github.com/WeConnect/star-sheets)
-
-### Stack
-* AppScripts
-* Vue
-* D3
-* Lodash
-
-### Code Snippets
+## Code Snippets - [View on Github](https://github.com/WeConnect/star-sheets)
 
 #### Create Vector Plan from Points, Using D3, Lodash, and Vue
 ```html
