@@ -36,14 +36,14 @@ scaleY () {
 }
 ```
 
-#### Create a formatted Google Sheet Tab with Data
+#### Create a Google Sheet Tab with Data
 ```javascript
 function createTabWithData(tabName, headers, doubleArray) {
   var tab = createTab(tabName);
   var rows = doubleArray.length;
   var columns = doubleArray[0].length;
   // row, column, rows, columns
-  tab.getRange(1, 1, 1, columns).setValues([headers]).setFontWeight("bold").setBackground('#616161').setFontColor('#FFFFFF');
+  tab.getRange(1, 1, 1, columns).setValues([headers]);
   tab.getRange(2, 1, rows, columns).setValues(doubleArray);
   return tabName;
 }
