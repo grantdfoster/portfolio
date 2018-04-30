@@ -4,6 +4,7 @@
 
 ![demo](star-sheets-demo.gif)
 
+## Stack
 ![stack](star-sheets-stack.png)
 
 ## Code Snippets - [View on Github](https://github.com/WeConnect/star-sheets)
