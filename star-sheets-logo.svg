@@ -123,13 +123,13 @@
 		c-2.2,3.8-3.1,7.3-3.1,10.4C799.5,123.8,800.4,125.9,802,127.9z"/>
 </g>
 <text transform="matrix(1 0 0 1 137.5791 163.4805)" class="st5 st6 st7">a Google Sheet add-in to easily search, compare, and copy data</text>
-<image style="overflow:visible;" width="151" height="151" xlink:href="vue.png"  transform="matrix(0.3663 0 0 0.3663 144.9709 203.1363)">
+<image style="overflow:visible;" width="151" height="151" xlink:href="vue.png"  transform="matrix(0.3663 0 0 0.3663 116.9709 217.9082)">
 </image>
-<image style="overflow:visible;" width="128" height="128" xlink:href="appscripts.png"  transform="matrix(0.4173 0 0 0.4173 494.7709 205.0829)">
+<image style="overflow:visible;" width="128" height="128" xlink:href="appscripts.png"  transform="matrix(0.4343 0 0 0.4343 500.7709 217.9082)">
 </image>
-<image style="overflow:visible;" width="400" height="400" xlink:href="d3.png"  transform="matrix(0.1444 0 0 0.1444 314.256 202.9035)">
+<image style="overflow:visible;" width="400" height="400" xlink:href="d3.png"  transform="matrix(0.1444 0 0 0.1444 304.256 214.9035)">
 </image>
 <line class="st8" x1="14" y1="189" x2="845.6" y2="189"/>
-<image style="overflow:visible;" width="160" height="142" xlink:href="lodash.png"  transform="matrix(0.3505 0 0 0.3505 668.9258 206.9082)">
+<image style="overflow:visible;" width="160" height="142" xlink:href="lodash.png"  transform="matrix(0.3857 0 0 0.3857 698.9258 217.9082)">
 </image>
 </svg>
