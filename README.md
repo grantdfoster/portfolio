@@ -1,10 +1,10 @@
-![demo](star-sheets-logo.png)
+![logo](star-sheets-logo.png)
 
-![demo](star-sheets-screenshots.png)
+![screenshots](star-sheets-screenshots.png)
 
 ![demo](star-sheets-demo.gif)
 
-![demo](star-sheets-stack.gif)
+![stack](star-sheets-stack.png)
 
 ## Code Snippets - [View on Github](https://github.com/WeConnect/star-sheets)
 
