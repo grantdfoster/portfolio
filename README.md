@@ -13,7 +13,7 @@
 ```html
 <svg :width="windowWidthExtents[1]" :height="windowHeightExtents[0]">
   <path
-    v-for="room, index in searchedRooms"
+    v-for="room, index in rooms"
     :key="room.uuid"
     @mouseover="hoveredRoom = room.uuid"
     @mouseleave="hoveredRoom = null"
@@ -41,7 +41,7 @@ scaledLocationY () {
 calculatePlanExtents () {
   var xValues = [];
   var yValues = [];
-  _.forEach(this.searchedRooms, (room) => {
+  _.forEach(this.rooms, (room) => {
     _.forEach(room.outline, (pt) => {
       xValues.push(parseInt(pt.x));
       yValues.push(parseInt(pt.y));
