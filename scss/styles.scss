@@ -34,19 +34,19 @@
 */
 
 // Define base and accent colors
-$base-color: #3498db;
+$base-color: #a8d5f4;
 $base-color-hover: darken($base-color, 10%);
 
 // Define background colors
-$background: #fff;
+$background: #f9f9f9;
 $background-alt: #f2f2f5;
 
 // Define border colors
-$border: #dcd9d9;
+$border: #c4c4c4;
 
 // Define text colors
-$heading: #374054;
-$text: #74808a;
+$heading: #a8d5f4;
+$text: #5b5b5b;
 
 /*
     ---------------------
@@ -85,7 +85,7 @@ $text: #74808a;
 */
 
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-size: 16px;
 
     &.active {
@@ -154,7 +154,7 @@ header {
 
     ul {
         display: inline-block;
-        background: $background;
+        background: darken($base-color-hover, 30);
         text-align: center;
         padding: 10px;
         margin: 0;
@@ -651,14 +651,14 @@ footer {
 }
 
 .project-image {
-    float: left;
+    float: right;
 }
 
 .project-info {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    margin-left: 300px;
+    margin-right: 300px;
     padding: 15px;
 
     h3 {
@@ -714,8 +714,8 @@ footer {
         display: inline-block;
         margin: 7px;
         padding: 5px 10px;
-        color: $heading;
-        background: darken($background-alt, 5%);
+        color: $base-color-hover;
+        background: $background;
         list-style: none;
         cursor: default;
         font-size: 1.2em;
