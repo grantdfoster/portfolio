@@ -1,1 +1,1 @@
-Visit grantdfoster.com to see this portfolio in action!
+Visit http://grantdfoster.com to see this portfolio in action!
